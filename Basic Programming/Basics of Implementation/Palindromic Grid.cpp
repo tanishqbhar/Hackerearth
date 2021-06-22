@@ -27,56 +27,56 @@ int main()
 		}
 		for(int i = 0; i < 26; i++)
 		{
-    		if(count[i] % 2)
-    		{
-        		++single;
-     		}
-    		count[i] = count[i] >> 1;
-    		if(count[i] % 2)
-    		{
-        		++pairs;
-    		}
+    			if(count[i] % 2)
+    			{
+        			++single;
+     			}
+    			count[i] = count[i] >> 1;
+    			if(count[i] % 2)
+    			{
+        			++pairs;
+    			}
 		}
 		//cout << "P : " << pairs << "s: " << single << flush;
 		bool flag = false;
 		if(m % 2)
 		{
-    		if(n % 2)
-    		{
-        		if(single == 1 && pairs <= (m / 2 + n / 2))
-            		flag = true;
-        		else
-            		flag = false;
-    		}
-    		else
-    		{
-        		if(single == 0 && pairs <= n / 2)
-            		flag = true;
-        		else
-            	flag = false;
-    		}
+    			if(n % 2)
+    			{
+        			if(single == 1 && pairs <= (m / 2 + n / 2))
+            				flag = true;
+        			else
+            				flag = false;
+    			}
+    			else
+    			{
+        			if(single == 0 && pairs <= n / 2)
+            				flag = true;
+        			else
+            				flag = false;
+    			}
 		}
 		else
 		{
-    		if(n % 2)
-    		{
-        		if(single == 0 && pairs <= m / 2)
-            		flag = true;
-        		else
-            		flag = false;
-    		}
-    		else
-    		{
-        		if(single == 0 && pairs == 0)
-            		flag = true;
-        		else
-            		flag = false;
-    		}
+    			if(n % 2)
+    			{
+        			if(single == 0 && pairs <= m / 2)
+            				flag = true;
+        			else
+            				flag = false;
+    			}
+    			else
+    			{
+        			if(single == 0 && pairs == 0)
+            				flag = true;
+        			else
+            				flag = false;
+    			}
 		}
 		if(flag)
-    		cout << "YES"<< endl << flush;
+    			cout << "YES"<< endl << flush;
 		else
-    		cout << "NO" << endl << flush;
+    			cout << "NO" << endl << flush;
  	}
  	return 0;
 }
