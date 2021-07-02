@@ -25,4 +25,5 @@ int main()
                 ans = (n - (i / 2)) + 1;
         }
         cout << ans << endl;
- }
+    }
+}
